@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tebak Emosi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Aplikasi Tebak Emosi</h1>
+    <p>Pilih cara untuk mendeteksi emosi:</p>
+    <div class="button-group">
+      <button id="cameraBtn">📸 Gunakan Kamera</button>
+      <button id="uploadBtn">🖼️ Unggah Foto</button>
+    </div>
+
+    <div id="cameraContainer" class="hidden">
+      <video id="camera" autoplay playsinline muted></video>
+      <button id="stopBtn" disabled>⛔ Hentikan Kamera</button>
+    </div>
+
+    <div id="uploadContainer" class="hidden">
+      <input type="file" id="imageUpload" accept="image/*">
+      <img id="preview" src="https://via.placeholder.com/320x240?text=Pratinjau+Foto" alt="Pratinjau Gambar">
+    </div>
+
+    <div id="result" class="result-box">Belum ada deteksi emosi.</div>
+  </div>
+
+  <!-- CDN FaceAPI -->
+  <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@1.4.1/dist/face-api.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
+
 
